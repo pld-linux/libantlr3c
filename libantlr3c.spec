@@ -32,7 +32,7 @@ Pliki nagłówkowe biblioteki libantlr3c.
 Summary:	Static libantlr3c library
 Summary(pl.UTF-8):	Statyczna biblioteka libantlr3c
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libantlr3c library.

@@ -2,12 +2,12 @@
 Summary:	C language runtime for antlr3
 Summary(pl.UTF-8):	Biblioteka C dla antlr3
 Name:		libantlr3c
-Version:	3.2
+Version:	3.4
 Release:	0.1
 License:	BSD
 Group:		Libraries
 Source0:	http://www.antlr.org/download/C/%{name}-%{version}.tar.gz
-# Source0-md5:	674646e1d1bf5c6015435480cead725a
+# Source0-md5:	08b1420129d5dccd0f4461cedf2a0d7d
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

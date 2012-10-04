@@ -1,9 +1,8 @@
-#
-Summary:	C language runtime for antlr3
+Summary:	C run-time support for ANTLR-generated parsers
 Summary(pl.UTF-8):	Biblioteka C dla antlr3
 Name:		libantlr3c
 Version:	3.4
-Release:	0.1
+Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://www.antlr.org/download/C/%{name}-%{version}.tar.gz
@@ -11,19 +10,19 @@ Source0:	http://www.antlr.org/download/C/%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-C runtime for antlr3
+C run-time support for ANTLR-generated parsers.
 
 %description -l pl.UTF-8
 Biblioteki C dla antlr3
 
 %package devel
-Summary:	Header files for libantlr3c library
+Summary:   Header files for the C bindings for ANTLR-generated parsers
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libantlr3c
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
-Header files for libantlr3c library.
+Header files for the C bindings for ANTLR-generated parsers
 
 %description devel -l pl.UTF-8
 Pliki nagłówkowe biblioteki libantlr3c.
@@ -47,7 +46,6 @@ Statyczna biblioteka libantlr3c.
 %configure
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -57,6 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+# even there's no SONAME symlink, run ldconfig to get library into ld.so.cache
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 

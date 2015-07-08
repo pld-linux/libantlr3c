@@ -2,7 +2,7 @@ Summary:	C run-time support for ANTLR-generated parsers
 Summary(pl.UTF-8):	Biblioteka uruchomieniowa C wspomagająca analizatory wygenerowane przez ANTLR
 Name:		libantlr3c
 Version:	3.4
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries
 Source0:	http://www.antlr3.org/download/C/%{name}-%{version}.tar.gz
